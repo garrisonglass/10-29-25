@@ -12,7 +12,7 @@ int main()
     {
         //f = 9 / *i+32
         double f = (9 / 5.0) * c + 32;
-        cout << "F:" << left<< setw(5) << "C:"
+        cout << "F:" << left << setw(5) << f << "C:" << c << endl;
     }
     cout << "Hello World!\n";
     return 0;
