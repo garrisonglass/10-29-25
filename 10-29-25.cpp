@@ -6,14 +6,26 @@ using namespace std;
 
 int main()
 {
-    //for i 0 - 20 inclusive
-    //loop
-    for(int c = 0; c <=20; c++)
+    int least, greatest, num;
+    cin >> num;
+    greatest = num;
+    least = num;
+
+    while (num !=- 99)
     {
-        //f = 9 / *i+32
-        double f = (9 / 5.0) * c + 32;
-        cout << "F:" << left<< setw(5) << "C:"
+        if (num > greatest)
+        {
+            greatest = num;
+        }
+        if (num < least)
+        { 
+            least = num;
+        }
+        cin >> num;
+
     }
+    cout << "The greatest is: " << greatest << endl;
+
     cout << "Hello World!\n";
     return 0;
 }
