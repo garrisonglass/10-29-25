@@ -25,7 +25,7 @@ int main()
 
     }
     cout << "The greatest is: " << greatest << endl;
-
+    cout << "The least is: " << least;
     cout << "Hello World!\n";
     return 0;
 }
