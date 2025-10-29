@@ -1,33 +1,34 @@
 // 10-29-25.cpp : 
-
 #include <iostream>
-#include <iomanip>
-using namespace std;
+#include<fstream>
 
 int main()
 {
-    int least, greatest, num;
-    cin >> num;
-    greatest = num;
-    least = num;
+	std::ifstream inputFile;
+	inputFile.open("Stores.txt");
 
-    while(num !=- 99)
-    {
-        if (num > greatest)
-        {
-            greatest = num;
-        }
-        if (num < least)
-        { 
-            least = num;
-        }
-        cin >> num;
+	if (!inputFile)
+	{
+		std::cout << "Error will Robinson, ERROR!";
+		return -1;
+	}
+	int sales;
 
-    }
-    cout << "The greatest is: " << greatest << endl;
-    cout << "The least is: " << least;
-    cout << "Hello World!\n";
-    return 0;
+	for (int i = 1; i < 6; i++)
+	{
+		inputFile >> sales;
+		int askterNum = sales / 100;
+		std::cout << "For store " << i << " :";
+		for (int j = 0; j < askterNum; j++)
+		{
+			std::cout << "*";
+		}
+		std::cout << std::endl;
+
+	}
+
+	inputFile.close();
+
+
+	return 0;
 }
-
-
