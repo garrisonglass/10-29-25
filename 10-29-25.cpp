@@ -11,7 +11,7 @@ int main()
     greatest = num;
     least = num;
 
-    while (num !=- 99)
+    while(num !=- 99)
     {
         if (num > greatest)
         {
